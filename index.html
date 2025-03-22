@@ -10,8 +10,8 @@
     <h1>ランダム数値ジェネレーター</h1>
 
     <div class="form-group">
-      <label>下限値: <input type="number" id="minValue" value="0"></label>
       <label>上限値: <input type="number" id="maxValue" value="100"></label>
+      <label>下限値: <input type="number" id="minValue" value="0"></label>
       <label>刻み値: <input type="number" id="stepValue" value="1"></label>
       <label>小数点以下の桁数: <input type="number" id="decimalPlaces" value="0" min="0" max="10"></label>
       <label>出力個数:<input type="number" id="outputCount" value="1" min="1"></label>
@@ -29,7 +29,10 @@
 
     <div id="result">ここに結果が表示されます</div>
 
-    <div id="history">履歴: </div>
+    <div class="historyWrap">
+      <p class="historyText">履歴:</p>
+      <div id="history"> </div>
+    </div>
 
   </div>
 

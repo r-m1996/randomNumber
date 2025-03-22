@@ -51,12 +51,14 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     const val = values[index];
     selected.push(val);
 
+    historySet.add(val);
+
     if (noDuplicate) {
-      historySet.add(val);
       values.splice(index, 1); // 値を削除
     }
   }
 
-  resultDiv.textContent = `出力: ${selected.join(', ')}`;
-  historyDiv.textContent = `履歴: ${Array.from(historySet).join(', ')}`;
+  resultDiv.textContent = `出力: ${selected.map(v => v.toFixed(decimalPlaces)).join(', ')}`;
+  historyDiv.textContent = `${Array.from(historySet).map(v => v.toFixed(decimalPlaces)).join(', ')}`;
+
 });
