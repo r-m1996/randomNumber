@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ランダム数値ジェネレーター</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ランダム数値ジェネレーター</h1>
+
+    <div class="form-group">
+      <label>下限値: <input type="number" id="minValue" value="0"></label>
+      <label>上限値: <input type="number" id="maxValue" value="100"></label>
+      <label>刻み値: <input type="number" id="stepValue" value="1"></label>
+      <label>小数点以下の桁数: <input type="number" id="decimalPlaces" value="0" min="0" max="10"></label>
+      <label>出力個数:<input type="number" id="outputCount" value="1" min="1"></label>
+      <label>除外する数値（カンマ区切り）:<input type="text" id="excludeValues" placeholder="例: 7,13,66"></label>
+      <select id="parityFilter">
+        <option value="any">すべて</option>
+        <option value="even">偶数のみ</option>
+        <option value="odd">奇数のみ</option>
+      </select>
+      <label>
+      <input type="checkbox" id="noDuplicate">重複を避ける（履歴から除外）</label>
+    </div>
+
+    <button id="generateBtn">生成</button>
+
+    <div id="result">ここに結果が表示されます</div>
+
+    <div id="history">履歴: </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
